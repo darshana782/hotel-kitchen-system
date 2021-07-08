@@ -30,7 +30,7 @@ public class FoodController {
         return foodService.getFoods();
     }
 
-    @GetMapping("/food/{foodId}")
+    @GetMapping("/foodById/{foodId}")
     public Food findFoodById(@PathVariable int foodId){
         return foodService.getFoodById(foodId);
     }
@@ -41,12 +41,12 @@ public class FoodController {
 //    }
 
     //update
-    @PutMapping("/update")
+    @PutMapping("/updateFood")
     public Food updateFood(@RequestBody Food food){
         return foodService.updateFood(food);
     }
 
-    @DeleteMapping("/delete/{foodId}")
+    @DeleteMapping("/deleteFood/{foodId}")
     public String deleteFood(@PathVariable int foodId){
         return foodService.deleteFood(foodId);
     }
